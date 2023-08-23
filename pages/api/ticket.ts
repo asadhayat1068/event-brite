@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'GET') {
         const client = await db.connect();
         const data = await client.sql`SELECT * FROM tickets`;
-        res.status(200).json(data);
+        res.status(200).json(data.rows);
     }
 }
 
