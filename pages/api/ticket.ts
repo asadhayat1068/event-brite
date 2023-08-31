@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { db } from '@vercel/postgres';
-import { processTicket } from "../services/ticketProcessor";
+// import { processTicket } from "../services/ticketProcessor";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
